@@ -93,6 +93,11 @@ img {
     height: auto;
 }
 
+#previewImg {
+    width: 562px;
+    height: 785px;
+}
+
 .template {
     width: 30vh;
     height: auto;
