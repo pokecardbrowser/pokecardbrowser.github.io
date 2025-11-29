@@ -12,8 +12,8 @@ def sort_key(name):
     suffix = m.group(2)
     return (num, suffix)
 
-files = sorted(os.listdir(), key=sort_key)
-setId = pathlib.Path(os.getcwd()).name
+setId = input("Set ID: ")
+files = sorted(os.listdir(f"./img/sets/{setId}/"), key=sort_key)
 finalScript = ""
 for file in files:
     line = baseString.replace('<SET>', setId).replace('<FILENAME>', file)
