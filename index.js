@@ -6,7 +6,7 @@ const downloadSetJson = document.querySelector(".downloadSetJson");
 let currentTheme = Cookies.get("currentTheme") || "1";
 
 function setTheme(themeId) {
-    document.body.style.backgroundImage = `url('https://pokecardbrowser-dev.duckdns.org/img/backgrounds/background${themeId}.png')`;
+    document.body.style.backgroundImage = `url('/img/backgrounds/background${themeId}.png')`;
     Cookies.set("currentTheme", themeId, {expires: 365});
 };
 
@@ -68,5 +68,6 @@ if (window.location.pathname == "/") {
     `;
     document.body.appendChild(hideScrollbar);
 };
+
 
 setTheme(currentTheme);
